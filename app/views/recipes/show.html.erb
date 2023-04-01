@@ -1,0 +1,14 @@
+<h1><%= @recipe.title %></h1>
+<p>Cook time: <%= @recipe.cook_time%> minutes</p>
+<p>Prep time: <%= @recipe.prep_time%> minutes</p>
+<p>Ratings: <%= @recipe.ratings%></p>
+<p>Author: <%= @recipe.author%></p>
+
+<h2>Ingredients</h2>
+<ul>
+<% @recipe.ingredients.each do |ingredient| %>
+  <li>
+    <%= ingredient.name %>
+  </li>
+<% end %>
+</ul>
