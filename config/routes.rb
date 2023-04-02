@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "recipes/:id", to: "recipes#show"
 
   get "ingredients", to: "ingredients#index"
+  get "/ingredients/:id", to: "ingredients#show"
   get "/search", to: "ingredients#search"
 end
