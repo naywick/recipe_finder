@@ -5,15 +5,19 @@ class IngredientsController < ApplicationController
   end
 
   def search()
-    #Get the ingredients ids
-    ingredients_ids = Ingredient.get_ids_by_names(params[:search])
-    puts ingredients_ids.to_json
+    if params[:search].nil? == true
+      nil
+    else
+      #Get the ingredients ids
+      ingredients_ids = Ingredient.get_ids_by_names(params[:search])
+      puts ingredients_ids.to_json
 
-    #Get the recipe_ingredients where ingredient_id is in the id array
-    recipe_ingredients = RecipeIngredient.where(ingredient_id: ingredients_ids)
+      #Get the recipe_ingredients where ingredient_id is in the id array
+      recipe_ingredients = RecipeIngredient.where(ingredient_id: ingredients_ids)
 
-    recipe_ids = recipe_ingredients.map { |ri| ri.recipe_id }
-    @recipes = Recipe.find(recipe_ids)
+      recipe_ids = recipe_ingredients.map { |ri| ri.recipe_id }
+      @recipes = Recipe.find(recipe_ids)
+    end
   end
 
   def show()
