@@ -8,9 +8,7 @@
 <ul>
   <% @recipes.each do |recipe| %>
     <li>
-      <a href="/recipes/<%= recipe.id %>">
-        <%= recipe.title %>
-      </a>
+      <%= link_to "#{recipe.title}", "/recipes/#{recipe.id}"%>
     </li>
   <% end%>
 </ul>
