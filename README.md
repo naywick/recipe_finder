@@ -17,5 +17,10 @@ Under the "All Recipes" heading on the homepage, you'll see a link that says `Cl
 You can type in search terms into the search bar at the top and hit enter.
 The recipes returned will be recipes that have any of the ingredients you searched for. 
 
+## Database structure
+This diagram illustrates how the database is currently set up.
+<img width="787" alt="image" src="https://user-images.githubusercontent.com/29549352/229854931-ac3d7d54-d045-4b94-a802-ea8e159c4ab4.png">
+
+
 ### Hosting
 While this app runs on fly.io, the database is not yet seeded there.
