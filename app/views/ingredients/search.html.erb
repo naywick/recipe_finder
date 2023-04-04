@@ -5,10 +5,12 @@
 <% end %>
 
 <h1>Matching Recipes</h1>
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li>
-      <%= link_to "#{recipe.title}", "/recipes/#{recipe.id}"%>
-    </li>
-  <% end%>
-</ul>
+<% if @recipes %>
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li>
+        <%= link_to "#{recipe.title}", "/recipes/#{recipe.id}"%>
+      </li>
+    <% end%>
+  </ul>
+<% end %>
