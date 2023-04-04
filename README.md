@@ -16,3 +16,6 @@ When the database has finished seeding, run `rails s` and visit the given URL in
 Under the "All Recipes" heading on the homepage, you'll see a link that says `Click here to search`. Click that link to be taken to the search endpoint. 
 You can type in search terms into the search bar at the top and hit enter.
 The recipes returned will be recipes that have any of the ingredients you searched for. 
+
+### Hosting
+While this app runs on fly.io, the database is not yet seeded there.
